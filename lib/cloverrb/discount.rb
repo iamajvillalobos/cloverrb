@@ -1,7 +1,7 @@
 module Cloverrb
-  class LineItem < Client
+  class Discount < Client
     def self.all(merchant_id, token, order_id)
-      url = "/merchants/#{merchant_id}/orders/#{order_id}/line_items"
+      url = "/merchants/#{merchant_id}/orders/#{order_id}/discounts"
       get(token, url)
     end
   end

@@ -1,12 +1,8 @@
 module Cloverrb
   class Merchant < Client
-    def initialize(token)
-      @token = token
-    end 
-
-    def find(merchant_id)
+    def self.find(merchant_id, token)
       url = "/merchants/#{merchant_id}?expand=owner"
-      get(@token, url) 
+      get(token, url)
     end
   end
 end
